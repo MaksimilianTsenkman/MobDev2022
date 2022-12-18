@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/primary_nav"
+    app:startDestination="@id/fragment_listView">
+
+    <fragment
+        android:id="@+id/fragment_listView"
+        android:name="com.example.finalproject.fragments.TodoListViewFragment"
+        android:label="fragment_list_view"
+        tools:layout="@layout/fragment_list_view">
+        <action
+            android:id="@+id/action_open_todo"
+            app:destination="@id/todoDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/todoDetails"
+        android:name="com.example.finalproject.fragments.TodoDetailsFragment"
+        android:label="fragment_todo_details"
+        tools:layout="@layout/fragment_todo_details" />
+    <fragment
+        android:id="@+id/todoAddition"
+        android:name="com.example.finalproject.fragments.TodoAdditionFragment"
+        android:label="fragment_todo_addition"
+        tools:layout="@layout/fragment_todo_addition">
+        <action
+            android:id="@+id/action_todoAddition_to_fragment_listView"
+            app:destination="@id/fragment_listView" />
+    </fragment>
+    <action
+        android:id="@+id/action_to_todo_addition"
+        app:destination="@id/todoAddition" />
+</navigation>

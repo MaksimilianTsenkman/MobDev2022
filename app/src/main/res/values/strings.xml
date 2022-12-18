@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Final Project</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="todo_title">TODO Title</string>
+    <string name="newButton">new Button</string>
+    <string name="todo_thumbnail">TODO thumbnail</string>
+    <string name="todo_image">TODO Image</string>
+    <string name="todo_steps">TODO Steps</string>
+    <string name="save_button">Save Button</string>
+    <string name="new_todo">New TODO</string>
+    <string name="todo_author">TODO Author</string>
+    <string name="choose_a_date">Choose a date</string>
+    <string name="chosen_image">Chosen Image</string>
+</resources>
