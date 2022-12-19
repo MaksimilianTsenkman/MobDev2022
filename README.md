@@ -31,20 +31,20 @@ Implementing the GPay API was also a chellenge because Google's video gides and 
 The initial idea was to create a WiFi Heatmap and Eduard spent a lot of time trying to implement it, but realised that this is too complicated.
 
 ## OWASP
-"MSTG-STORAGE-2 - No sensitive data should be stored outside of the app container or system credential storage facilities."
-PASSED
+#### "MSTG-STORAGE-2 - No sensitive data should be stored outside of the app container or system credential storage facilities."
+PASSED.
 Data is stored localy using RoomDB
 
-"MSTG-STORAGE-3 - No sensitive data is written to application logs."
-NOT PASSED
+#### "MSTG-STORAGE-3 - No sensitive data is written to application logs."
+NOT PASSED.
 Some of our logs contain sensitive informaton as it was used for testing the app during the development.
 
-"MSTG-PLATFORM-1 - The app only requests the minimum set of permissions necessary"
-PASSED
+#### "MSTG-PLATFORM-1 - The app only requests the minimum set of permissions necessary"
+PASSED.
 We only ask for notification permission.
 
-"MSTG-PLATFORM-3 - The app does not export sensitive functionality via custom URL schemes, unless these mechanisms are properly protected."
-PASSED
+#### "MSTG-PLATFORM-3 - The app does not export sensitive functionality via custom URL schemes, unless these mechanisms are properly protected."
+PASSED.
 We do not use URLs.
 
 ## Who did what
