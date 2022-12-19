@@ -14,6 +14,8 @@ import android.app.*
 import android.content.Context
 import android.content.Context.NOTIFICATION_SERVICE
 import android.view.*
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import com.example.finalproject.*
 import com.example.finalproject.Notification
 import com.example.finalproject.databinding.FragmentTodoAdditionBinding
@@ -30,7 +32,6 @@ class TodoAdditionFragment : Fragment() {
         createNotificationChannel()
         setUpSaveButtonClickListener()
     }
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

@@ -22,7 +22,7 @@ class Notification : BroadcastReceiver()
             .setContentText(intent.getStringExtra(messageExtra))
             .build()
 
-        val  manager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        val manager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         manager.notify(notificationID, notification)
     }
 

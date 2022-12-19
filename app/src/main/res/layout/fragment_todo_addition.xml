@@ -69,6 +69,7 @@
         android:clickable="true"
         android:contentDescription="@string/save_button"
         android:focusable="true"
+        app:backgroundTint="#FAB248"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_menu_save" />

@@ -41,6 +41,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/dataTime"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
