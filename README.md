@@ -12,11 +12,11 @@ The app includes an option to make a contribution to the progress of the mankind
 
 ## How to run
 There are two project that we wanted to merge together (The ToDo and Google Pay Api), but we did not succeed.
-Googe pay API can be viewed separately.
+Googe pay API project ("kotlin.zip") can be viewed separately.
 
 The ToDo list project is compiled and built as any other project.
 
-In order to test GPay project (package name "kotlin") you need to enter your Google account on emulator (or you physical devise) in "Settings" -> "Passwords & Accounts".
+In order to test GPay project you need to enter your Google account on emulator (or you physical devise) in "Settings" -> "Passwords & Accounts".
 And you should have at least one real card attached to your account. The GPay app is in the test mode, so no real money will be withdrawn.
 
 ## Difficulties analysis
