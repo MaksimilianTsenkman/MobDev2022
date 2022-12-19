@@ -19,7 +19,7 @@ The ToDo list project is compiled and built simply as any other project.
 In order to test GPay project you need to enter your Google account on emulator(or you physical devise) in "Settings" -> "Passwords & Accounts".
 And you should have at least one real card attached to your account. The GPay app is in the test mode, so no real money will be withdrawn.
 
-## Difficulties analysis
+## Difficulties' analysis
 We have encountered many difficulies along the way.
 Most significant were Graddle compatibility. This is the reason we were not able to merge projects together.
 
@@ -31,9 +31,9 @@ Implementing the GPay API was also a chellenge because Google's video gides and 
 The initial idea was to create a WiFi Heatmap and Eduard spent a lot of time trying to implement it, but realised that this is too complicated.
 
 ## Who did what
-Eduard Žurin: Room DB implementation.
+Eduard Žurin: Room DB implementation
 
-Maksimilian Tsenkman: The todo list implementation, design.
+Maksimilian Tsenkman: The todo list implementation, design
 
 Aleksander Zahharov: Google Pay implimentation, documentation
 
