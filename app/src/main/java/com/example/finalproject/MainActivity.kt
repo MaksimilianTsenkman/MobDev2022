@@ -1,6 +1,7 @@
 package com.example.finalproject
 
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -41,7 +42,9 @@ class MainActivity : AppCompatActivity() {
                 mapWithTodoValues.remove(value)
             }
             selected = arrayListOf()
-            System.out.println(mapWithTodoValues)
+            val myIntent = Intent(this, MainActivity::class.java)
+            startActivity(myIntent)
+            this.overridePendingTransition(0, 0)
             true
         }
         else -> super.onOptionsItemSelected(item)

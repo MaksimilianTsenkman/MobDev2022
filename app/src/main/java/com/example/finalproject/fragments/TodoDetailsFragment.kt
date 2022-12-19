@@ -25,7 +25,6 @@ class TodoDetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         arguments?.let {
             val todoID = it.getLong("todoID", -1)
             val todo = model.getTodoByID(todoID)
