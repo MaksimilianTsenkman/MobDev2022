@@ -1,17 +1,20 @@
 package com.example.finalproject
 
 import android.graphics.Bitmap
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
+import android.widget.Button
+import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.room.TodoEntity
-class TodoAdapter(var todos: Array<TodoEntity> = arrayOf(),
-                  var thumbnails: MutableMap<String, Bitmap?>,
-                  var listener: TodoClickListener,
+
+
+class TodoAdapter(
+    var todos: ArrayList<TodoEntity> = ArrayList(),
+    var thumbnails: MutableMap<String, Bitmap?>,
+    var listener: TodoClickListener,
 ):
     RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
 
@@ -28,14 +31,17 @@ class TodoAdapter(var todos: Array<TodoEntity> = arrayOf(),
 
     override fun onBindViewHolder(holder: TodoViewHolder, position: Int) {
         val todo = todos[position]
-
         holder.itemView.apply {
+            mapWithTodoValues[todo] = false
+            val checkBox = this.findViewById<CheckBox>(R.id.checkbox)
+            checkBox.setOnClickListener {
+                mapWithTodoValues[todo] = checkBox.isChecked
+            }
             this.findViewById<TextView>(R.id.todoTitle).text = todo.title
             setOnClickListener {
                 listener.onClick(todo)
             }
         }
-
     }
 
     override fun getItemCount(): Int = todos.size

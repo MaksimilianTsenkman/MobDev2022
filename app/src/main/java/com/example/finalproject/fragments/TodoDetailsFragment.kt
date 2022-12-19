@@ -1,6 +1,5 @@
 package com.example.finalproject.fragments
 
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -33,7 +32,7 @@ class TodoDetailsFragment : Fragment() {
             todo?.let {
                 binding.todoName.text = todo.title
                 binding.todoDescription.text = todo.contents
-                binding.todoAuthor.text = todo.author
+                binding.dataTime.text = todo.imageName
             }
         }
     }

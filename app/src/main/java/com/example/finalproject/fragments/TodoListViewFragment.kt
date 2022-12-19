@@ -2,17 +2,14 @@ package com.example.finalproject.fragments
 
 import android.os.Bundle
 import android.util.Log
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.finalproject.R
-import com.example.finalproject.TodoAdapter
-import com.example.finalproject.TodoViewModel
+import com.example.finalproject.*
 import com.example.finalproject.databinding.FragmentListViewBinding
+import com.example.finalproject.room.LocalTodoDB
 import com.example.finalproject.room.TodoEntity
 
 class TodoListViewFragment : Fragment() {
@@ -63,4 +60,5 @@ class TodoListViewFragment : Fragment() {
             findNavController().navigate(R.id.action_open_todo, arguments)
         }
     }
+
 }

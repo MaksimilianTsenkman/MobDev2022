@@ -2,21 +2,10 @@ package com.example.finalproject.fragments
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
-import android.content.ActivityNotFoundException
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
-import android.provider.MediaStore
-import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.content.ContextCompat
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.finalproject.room.TodoEntity
@@ -24,12 +13,12 @@ import java.util.*
 import android.app.*
 import android.content.Context
 import android.content.Context.NOTIFICATION_SERVICE
-import androidx.core.app.NotificationCompat
-import androidx.core.content.ContextCompat.getSystemService
+import android.view.*
 import com.example.finalproject.*
 import com.example.finalproject.Notification
 import com.example.finalproject.databinding.FragmentTodoAdditionBinding
 import com.example.finalproject.room.LocalTodoDB
+import java.text.SimpleDateFormat
 
 class TodoAdditionFragment : Fragment() {
 
@@ -41,6 +30,7 @@ class TodoAdditionFragment : Fragment() {
         createNotificationChannel()
         setUpSaveButtonClickListener()
     }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -61,12 +51,14 @@ class TodoAdditionFragment : Fragment() {
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
+                val simpleDateFormat = SimpleDateFormat("dd/MM/yyyy hh:mm")
+                val dateString = simpleDateFormat.format(getTime())
                 LocalTodoDB.getInstance(requireContext()).getTodoDAO().insertTodos(
                     TodoEntity(
                         author = "",
                         title = title,
                         contents = steps,
-                        imageName = ""
+                        imageName = dateString
                     )
                 )
                 scheduleNotification()
