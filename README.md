@@ -33,11 +33,12 @@ The initial idea was to create a WiFi Heatmap and Eduard spent a lot of time try
 ## OWASP
 #### "MSTG-STORAGE-2. No sensitive data should be stored outside of the app container or system credential storage facilities."
 PASSED.
-Data is stored localy using RoomDB
+Data is stored localy using RoomDB.
 
 #### "MSTG-STORAGE-3. No sensitive data is written to application logs."
 NOT PASSED.
 Some of our logs contain sensitive informaton as it was used for testing the app during the development.
+We should delete them.
 
 #### "MSTG-PLATFORM-1. The app only requests the minimum set of permissions necessary"
 PASSED.
